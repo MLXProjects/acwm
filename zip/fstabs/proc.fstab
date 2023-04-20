@@ -1,0 +1,11 @@
+rootfs / rootfs rw,seclabel 0 0
+tmpfs /dev tmpfs rw,seclabel,nosuid,relatime,mode=755 0 0
+devpts /dev/pts devpts rw,seclabel,relatime,mode=600 0 0
+proc /proc proc rw,relatime 0 0
+sysfs /sys sysfs rw,seclabel,relatime 0 0
+selinuxfs /sys/fs/selinux selinuxfs rw,relatime 0 0
+tmpfs /tmp tmpfs rw,seclabel,relatime 0 0
+/dev/block/mmcblk0p1 /dpp vfat ro,context=u:object_r:firmware_file:s0,nosuid,nodev,noexec,noatime,nodiratime,uid=1000,gid=1000,fmask=0337,dmask=0227,codepage=cp437,iocharset=iso8859-1,shortname=lower,errors=remount-ro 0 0
+/dev/block/mmcblk0p19 /cache ext4 rw,seclabel,relatime,data=ordered 0 0
+/dev/block/mmcblk0p20 /data ext4 rw,seclabel,relatime,data=ordered 0 0
+/dev/block/mmcblk0p20 /sdcard ext4 rw,seclabel,relatime,data=ordered 0 0
