@@ -111,7 +111,7 @@ void uitools_drawmenu(UI_MENUP menu){
 			/* draw selected item background & text */
 			//alog(" - %s", menu->items[(i+menu->draw_offset)]->text);
 			libaroma_draw_rect(libaroma_fb()->canvas, 0, y_offset, libaroma_fb()->w, uires_charheight+libaroma_dp(1), UI_ACCENT, 0xFF);
-			libaroma_draw_text(libaroma_fb()->canvas, " > ", 0, y_offset, UI_TEXTCOLOR, libaroma_fb()->w, LIBAROMA_FONT(0,UI_FONTSIZE)|LIBAROMA_TEXT_SINGLELINE, uires_charheight);
+			libaroma_draw_text(libaroma_fb()->canvas, " - ", 0, y_offset, UI_TEXTCOLOR, libaroma_fb()->w, LIBAROMA_FONT(0,UI_FONTSIZE)|LIBAROMA_TEXT_SINGLELINE, uires_charheight);
 			libaroma_draw_text(libaroma_fb()->canvas, menu->items[(i+menu->draw_offset)]->text, uires_charwidth*3, y_offset, UI_TEXTCOLOR, libaroma_fb()->w, LIBAROMA_FONT(0,UI_FONTSIZE)|LIBAROMA_TEXT_SINGLELINE, uires_charheight);
 		}
 		y_offset += uires_charheight;
